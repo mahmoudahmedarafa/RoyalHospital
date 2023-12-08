@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <environment include="Development">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Home Page" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!--START FAVICONS-->
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+        <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+        <meta name="msapplication-TileColor" content="#eeeeee">
+        <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+    <!--End FAVICONS-->
+    <!--Css-->
+    
+        <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Exo:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=latin-ext,vietnamese" />
+        <link href="~/lib/bootstrap-rtl/dist/css/bootstrap-rtl.min.css" rel="stylesheet" />
+    </environment>
+    @RenderSection("head", false)
+    </head>
+<body>
+    <div class="page-wrapper">
+        <div class="preloader"></div>
+        <!-- Main Header-->
+        <header class="main-header header_style_2">
+
+            <!--Header Top Two-->
+            <div class="header-top-two">
+                <div class="auto-container">
+                    <div class="clearfix">
+                        <!--Top Left-->
+                        <div class="top-left">
+                            <ul class="header-info-list">
+                                <li><span class="icon fa fa-envelope"></span>info@royalhospital-eg.com&#xD;&#xA;</li>
+                                <li>
+                                    <span class="icon fa fa-map-marker"></span>1 Airport Road, Hurghada, Egypt
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Support Box-->
+                        <div class="support-box d-lg-none">
+                            <div class="support">
+                                For Support Call
+                                <span class="icon fa fa-headphones"></span>
+                            </div>
+                            <a href="tel:00201202667788" dir="ltr" class="support-number">&#x2B;20 12 02 66 7788</a>
+                        </div>
+                        <!--Top Right-->
+                        <div class="top-right">
+                            <div class="btn-box d-inline-block">
+                                <a href="/appointment" class="quote-btn">
+                                    Book an Appointment
+                                </a>
+                            </div>
+                            <div class="lang-dropdown ml-4">
+                                <a href="/ar" class="font-weight-normal">
+                                    <img class="flag flag-eg" src="/images/flags/flag_placeholder.png" />
+                                    العربية
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Header-Upper-->
+            <div class="header-upper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2 col-6 logo-box">
+                            <div class="logo"><a href="/"><img src="/images/logo/new-logo.png" alt="Royal Hospital" title="Royal Hospital"></a></div>
+                        </div>
+                        <div class="col-lg-8 col-6 nav-outer clearfix">
+                            <!-- Main Menu -->
+                            <nav class="main-menu">
+                                <a href="#mobileMenu" class=" d-inline-block d-lg-none menu-bars text-right">
+                                    <i class="fa fa-bars fa-2x bars-icon"></i>
+                                </a>
+
+                                <div class="d-none d-lg-block" id="navbarSupportedContent">
+                                    <ul class="navigation clearfix">
+                                        <li class="current"><a href="/"> Home</a></li>
+                                        <li class=""><a href="/departments">Departments</a></li>
+                                        <li class=""><a href="/clinics">Clinics</a></li>
+                                        <li class=""><a href="/insurance">Insurance</a></li>
+                                        <li class=""><a href="/our-team">Our Team</a></li>
+                                        <li class=""><a href="/news">News</a></li>
+                                        <li class=""><a href="/about">About Us</a></li>
+                                        <li class=""><a href="/contact-us">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <!--Support Box-->
+                        <div class="support-box col-lg-2">
+                            <div class="support">For Support Call <span class="icon fa fa-headphones"></span></div>
+                            <a href="tel:00201202667788" dir="ltr" class="support-number">&#x2B;20 12 02 66 7788</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Sticky Header-->
+            <div class="sticky-header">
+                <div class="auto-container clearfix">
+                    <!--Logo-->
+                    <div class="logo float-left">
+                        <a class="img-responsive" href="/"><img src="/images/logo/new-logo.png" alt="Royal Hospital" title="Royal Hospital"></a>
+                    </div>
+
+                    <!-- Main Menu -->
+                    <div class="right-col float-right">
+                        <nav class="main-menu navbar-expand-md">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent1">
+                                <ul class="navigation clearfix">
+                                    <li class="current"><a href="/">Home</a></li>
+                                    <li class=""><a href="/departments">Departments</a></li>
+                                    <li class=""><a href="/clinics">Clinics</a></li>
+                                    <li class=""><a href="/insurance">Insurance</a></li>
+                                    <li class=""><a href="/our-team">Our Team</a></li>
+                                    <li class=""><a href="/news">News</a></li>
+                                    <li class=""><a href="/about">About Us</a></li>
+                                    <li class=""><a href="/contact-us">Contact Us</a></li>
+                                    <li class="lang-dropdown ml-4">
+
+                                        <a href="/ar" class="font-weight-normal">
+                                            <img class="flag flag-eg" src="/images/flags/flag_placeholder.png" />
+                                            العربية
+                                        </a>
+
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav><!-- Main Menu End-->
+                    </div>
+
+                </div>
+            </div>
+            <!--End Sticky Header-->
+
+        </header>
+
+        <section class="container">
+            <h2 class="text-center">@ViewBag.Title</h2>
+            @RenderBody()
+        </section>
+
+        <!-- footer start -->
+        <footer class="main-footer">
+            <div class="auto-container">
+                <!--Widgets Section-->
+                <div class="widgets-section">
+                    <div class="row clearfix">
+                        <!--Footer Column-->
+                        <div class="footer-column col-lg-3 col-md-6">
+                            <div class="footer-widget logo-widget">
+                                <div class="logo">
+                                    <a href="#."><img src="/images/logo/new-logo.png" alt="" /></a>
+                                </div>
+                                <div class="text">
+                                    1 Airport Road, Hurghada, Egypt
+                                </div>
+                                <ul class="list-style-one">
+                                    <li>
+                                        <span>
+                                            Phone :
+                                        </span>
+                                        <span dir="ltr">&#x2B;20 12 02 66 7788</span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            Email :
+                                        </span>
+                                        <a href="info@royalhospital-eg.com&#xD;&#xA;">info@royalhospital-eg.com&#xD;&#xA;</a>
+                                    </li>
+                                </ul>
+                                <!--Social Icon One-->
+                                <ul class="social-icon-one">
+                                    <li><a href="https://www.facebook.com/royalhospitalhurghada"><span class="fa fa-facebook"></span></a></li>
+                                    <li><a href="https://www.instagram.com"><span class="fa fa-instagram"></span></a></li>
+                                    <li><a href="https://www.youtube.com/channel/UCJuShaCG8KSSflHycRSliIg"><span class="fa fa-youtube"></span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--Footer Column-->
+                        <div class="footer-column col-lg-3 col-6">
+                            <div class="footer-widget links-widget">
+                                <h2>
+                                    Quick Links
+                                </h2>
+                                <ul class="footer-link">
+                                    <li><a href="/about">About Us</a></li>
+                                    <li><a href="/clinics">Clinics</a></li>
+                                    <li><a href="/departments">Departments</a></li>
+                                    <li><a href="/insurance">Insurance</a></li>
+                                    <li><a href="/news">News</a></li>
+                                    <li><a href="/contact-us">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--Footer Column-->
+                        <div class="footer-column col-lg-3 col-6">
+                            <div class="footer-widget posts-widget">
+                                <h2>
+                                    Recent Posts
+                                </h2>
+                                <article class="post">
+                                    <div class="text"><a href="/news-details/brain-surgery/15">Royal Brain surgery - Presicion and accuracy </a></div>
+                                    <ul class="post-date">
+                                        <li>July 30, 2023</li>
+                                    </ul>
+                                </article>
+                                <article class="post">
+                                    <div class="text"><a href="/news-details/royal-orthopedic-department-leadership/14">Royal Orthopedic Department - Its always about Leadership </a></div>
+                                    <ul class="post-date">
+                                        <li>July 29, 2023</li>
+                                    </ul>
+                                </article>
+                                <article class="post">
+                                    <div class="text"><a href="/news-details/royal-oncology-center/12">Royal Hospital Oncology center</a></div>
+                                    <ul class="post-date">
+                                        <li>July 25, 2023</li>
+                                    </ul>
+                                </article>
+                            </div>
+                        </div>
+
+                        <!--Footer Column-->
+                        <div class="footer-column col-lg-3 col-md-6">
+                            <div class="footer-widget newsletter-widget">
+                                <h2>
+                                    Our Newsletter
+                                </h2>
+                                <div class="text">
+                                    Get in your inbox the latest News and Offers from Royal Hospital
+                                </div>
+                                <div class="newsletter-form">
+                                    <form method="post" action="#.">
+                                        <div class="form-group">
+                                            <input required="" placeholder="ClientEmail">
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit"
+                                                    class="theme-btn btn-style-one">
+                                                Subscribe
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Footer Bottom-->
+            <div class="footer-bottom">
+                <div class="auto-container">
+                    <div class="row clearfix">
+                        <div class="column col-md-6 col-sm-12 col-xs-12">
+                            <div class="copyright">
+                                &copy; 2023
+                                Royal Hospital. All Rights Reserved.
+                            </div>
+                        </div>
+                        <div class="column col-md-6 col-sm-12 col-xs-12 text-md-right white-txt">
+                            <p>
+                                Powered by <a href="https://innovixsolutions.com" target="_blank">innovix solutions</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html" style="display: block;">
+        <span class="fa fa-long-arrow-up"></span>
+    </div>
+
+    <div id="mobileMenu">
+        <ul>
+            <li class="current"><a href="/">Home</a></li>
+            <li class=""><a href="/departments">Departments</a></li>
+            <li class=""><a href="/clinics">Clinics</a></li>
+            <li class=""><a href="/insurance">Insurance</a></li>
+            <li class=""><a href="/our-team">our team</a></li>
+            <li class=""><a href="/news">News</a></li>
+            <li class=""><a href="/about">About Us</a></li>
+            <li class=""><a href="/contact-us">Contact Us</a></li>
+        </ul>
+    </div>
+
+
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="~/js/index.js"></script>
+        <script src="/js/bundle.js?v=bA539JXSodiMa1EpHniddAoqzV6XZVwgkdISaG1-1GY"></script>
+        <script src="~/lib/jQuery-Validation-Engine/languages/jquery.validationEngine-en.min.js"></script>
+        <script async src="https://www.google.com/recaptcha/api.js"></script>
+
+
+        <script src="/js/vendors/bootstrap-rtl.min.js"></script>
+        <script src="/js/script.js?v=7l0hZrM4REloz7w4k1ZXMmc84T2_829miSLc3mR4-Lc"></script>
+        <script>
+            $(document).ready(function () {
+                $('#datepicker').datepicker({ startDate: '+1d' });
+            });
+
+            // languages Dropdown
+            //$(".lang-dropdown").on("click", ".dropdown-toggle", function (e) {
+            //    e.preventDefault();
+            //    $(this).parent().addClass("show");
+            //    $(this).attr("aria-expanded", "true");
+            //    $(this).next().addClass("show");
+            //});
+            //$('.dropdown-menu').on('click', 'a', function () {
+            //    var text = $(this).html();
+            //    var htmlText = text + ' <span class="caret"></span>';
+            //    $(this).closest('.dropdown').find('.dropdown-toggle').html(htmlText);
+            //});
+
+            // mmenu intialize
+            var mmenu = new Mmenu("#mobileMenu", {
+                navbar: {
+                    title: "Royal Hospital"
+                },
+                offCanvas: {
+                    position: "left"
+                }
+            },
+                {
+                    offCanvas: {
+                        page: {
+                            pageNodetype: 'body'
+                        }
+                    }
+                });
+
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                $('.popup-form').magnificPopup({
+                    type: 'inline',
+                    preloader: false,
+                    focus: '#name',
+
+                    // When elemened is focused, some mobile browsers in some cases zoom in
+                    // It looks not nice, so we disable it:
+                    callbacks: {
+                        beforeOpen: function () {
+                            if ($(window).width() < 700) {
+                                this.st.focus = false;
+                            } else {
+                                this.st.focus = '#name';
+                            }
+                        }
+                    }
+                });
+
+                // magnific popup for videos players platforms & maps
+                $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+                    type: 'iframe',
+                    mainClass: 'mfp-fade',
+                    removalDelay: 160,
+                    preloader: false,
+                    fixedContentPos: false
+                });
+
+                // magnific popup for gallery
+                $('.popup-gallery').magnificPopup({
+                    delegate: 'a',
+                    type: 'image',
+                    tLoading: 'Loading image #%curr%...',
+                    mainClass: 'mfp-img-mobile',
+                    gallery: {
+                        enabled: true,
+                        navigateByImgClick: true,
+                        preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+                    },
+                    image: {
+                        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                        titleSrc: function (item) {
+                            return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+                        }
+                    },
+                    zoom: {
+                        enabled: true,
+                        duration: 400 // don't foget to change the duration also in CSS
+                    }
+                });
+            });
+        </script>
+    </environment>
+
+    @RenderSection("Scripts", false)
+</body>
+</html>

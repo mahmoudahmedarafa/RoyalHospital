@@ -1,0 +1,24 @@
+<div class="four-item-carousel owl-carousel owl-theme">
+  <div div *ngFor="let dp of departmentList">
+    <div class="case-block wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+      <div class="inner-box">
+        <div class="image">
+          <img src="{{dp.imghome}}" alt="{{dp.title}}" />
+          <div class="overlay-box">
+            <div class="overlay-inner">
+              <div class="content">
+                <div class="text">
+                  {{dp.description}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lower-box">
+          <h3><a href="#.">{{dp.title}}</a></h3>
+        </div>
+      </div>
+    </div>
+    <!--Case Block-->
+  </div>
+</div>

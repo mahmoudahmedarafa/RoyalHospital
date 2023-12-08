@@ -1,0 +1,63 @@
+<section class="page-title-two white" style="background:linear-gradient(0deg, rgb(21 134 148 / 0.6),
+hsl(187deg 75% 33% / 60%)), url(/photos/banners/Clinics_lg.jpg) no-repeat; background-size: cover;">
+  <div class="auto-container">
+    <h1>Emergency Departement</h1>
+    <ul class="page-breadcrumb-two">
+      <li>  <a href="/">Home</a></li>
+      <li>Emergency Departement</li>
+    </ul>
+  </div>
+</section>
+
+<section class="why-choose-us-7 clinic_details-page">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-12">
+        <aside class="sidebar">
+          <div class="sidebar-inner">
+            <div class="sidebar-widget-two departments mb-0 mb-sm-5">
+              <div class="dropdown d-md-none">
+                <button class="btn dropdown-toggle" type="button"
+                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                  {{selectedDepartment.title}}
+                </button>
+                <div *ngFor="let dp of allDepartments">
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a href="/departments/{{dp.selector}}" class="dropdown-item">
+                      {{dp.title}}
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <ul class="list d-none d-md-block">
+                <div *ngFor="let dp of allDepartments">
+                  <li>
+                    <a href="/departments/{{dp.selector}}">
+                      {{dp.title}} <span class="fa fa-long-arrow-right"></span>
+                    </a>
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <div class="col-lg-8 col-sm-12">
+        <div class="description pt-5">
+          <div class="depimage">
+            <img src="{{selectedDepartment.img}}" alt="{{selectedDepartment.title}}">
+          </div>
+          <div class="title">
+            <h3>
+              {{selectedDepartment.title}}
+            </h3>
+          </div>
+          <div class="text">
+            <p>{{selectedDepartment.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

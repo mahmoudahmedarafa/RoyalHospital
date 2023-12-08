@@ -1,0 +1,21 @@
+<div class="team-box">
+  <div class="auto-container">
+    <div class="row clearfix justify-content-center">
+      <div *ngFor="let dc of doctorList">
+      <!-- Team Block -->
+      <div class="team-block col-lg-3 col-6 wow fadeInUp">
+        <div class="inner-box">
+          <a href="JavaScript:;" class="image-box">
+            <img src="{{dc.img}}" alt="{{dc.name}}">
+            <div class="direction"> Go to Clinic </div>
+          </a>
+          <div class="info-box">
+            <h3 class="name"><a href="#.">{{dc.name}}</a></h3>
+            <span class="designation">{{dc.title}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

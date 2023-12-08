@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+  <div *ngFor="let nw of newsList">
+    <div class="col-lg-4 col-sm-6 d-none d-sm-block">
+      <div class="inner-box">
+        <div class="image">
+          <a href="/news-details/{{nw.selector}}/{{nw.id}}"><img src="{{nw.img}}" alt="{{nw.title}}"></a>
+          <a href="/news-details/{{nw.selector}}/{{nw.id}}">
+            <div class="overlay-style-two"></div>
+          </a>
+        </div>
+        <div class="lower-content">
+          <ul class="post-meta">
+            <li class="date">
+              <span class="fa fa-clock-o"></span><strong>{{nw.date | date}}</strong>
+            </li>
+          </ul>
+          <h3><a href="/news-details/{{nw.selector}}/{{nw.id}}">{{nw.title}}</a></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="single-item-carousel owl-carousel d-sm-none">
+      <div *ngFor="let nw of newsList">
+        <div class="item">
+          <div class="inner-box">
+            <div class="image">
+              <a href="/news-details/{{nw.selector}}/{{nw.id}}"><img src="{{nw.img}}" alt="{{nw.title}}"></a>
+              <a href="/news-details/{{nw.selector}}/{{nw.id}}">
+                <div class="overlay-style-two"></div>
+              </a>
+            </div>
+            <div class="lower-content">
+              <ul class="post-meta">
+                <li class="date">
+                  <span class="fa fa-clock-o"></span><strong>{{nw.date | date}}</strong>
+                </li>
+              </ul>
+              <h4><a href="/news-details/{{nw.selector}}/{{nw.id}}">{{nw.title}}</a></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="row text-left">
+  <div *ngFor="let cl of clinicList">
+    <div class="col-lg-6 col-sm-12 d-none d-sm-block">
+      <div class="item">
+        <div class="icon">
+          <div class="icon last">
+            <svg width="70" height="70" class="icon">
+              <use xlink:href="/images/svg/svg-sprite.svg#heart-4" />
+            </svg>
+          </div>
+        </div>
+        <div class="title">
+          <h3><a href="/clinic/cardiology">{{cl.title}}</a></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <div class="single-item-carousel owl-carousel d-sm-none">
+      <div *ngFor="let cl of clinicList">
+        <div class="item">
+          <div class="icon">
+            <div class="icon last">
+              <svg width="70" height="70" class="icon">
+                <use xlink:href="/images/svg/svg-sprite.svg#heart-4" />
+              </svg>
+            </div>
+          </div>
+          <div class="title">
+            <h3><a href="/clinic/cardiology">{{cl.title}}</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

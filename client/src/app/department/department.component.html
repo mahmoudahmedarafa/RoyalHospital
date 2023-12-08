@@ -1,0 +1,51 @@
+<section class="page-title-two white" style="background:linear-gradient(0deg, rgb(21 134 148 / 0.6),
+hsl(187deg 75% 33% / 60%)), url(/photos/banners/departments_lg.jpg) no-repeat; background-size: cover;">
+  <div class="auto-container">
+    <h1>Departments</h1>
+    <ul class="page-breadcrumb-two">
+      <li><a href="/"> Home</a></li>
+      <li>Departments</li>
+    </ul>
+  </div>
+</section>
+<section class="service-img-h9 services19 kk">
+  <div class="container">
+    <div class="sec-title centered">
+      <div class="title-text">
+        Welcome to Royal Hospital
+      </div>
+      <h2> Patients Services</h2>
+    </div>
+    <div class="row">
+      <div *ngFor="let dp of departmentList">
+        <div class="item col-lg-4 col-md-6 col-sm-12">
+          <a href="/departments/{{dp.selector}}">
+            <div class="image-box">
+              <div class="overlay-anim-box2 overlay-dark-bg-2" data-animation="overlay-anim2">
+                <img src="{{dp.img}}" alt="{{dp.title}}">
+              </div>
+            </div>
+          </a>
+          <div class="lower-content">
+            <div class="icon">
+              <span>
+                <svg width="40" height="40">
+                  <use xlink:href="{{dp.svgSprite}}"></use>
+                </svg>
+              </span>
+            </div>
+
+            <div class="title">
+              <a href="/departments/{{dp.selector}}">
+                <h3>{{dp.title}}</h3>
+              </a>
+            </div>
+            <div class="text">
+              <p>{{dp.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
